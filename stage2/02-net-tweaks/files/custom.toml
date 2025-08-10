@@ -1,0 +1,25 @@
+config_version = 1
+
+[system]
+hostname = "TARGET_HOSTNAME"
+
+[user]
+name = "FIRST_USER_NAME"
+password = "FIRST_USER_PASS"
+password_encrypted = true
+
+[ssh]
+enabled = true
+password_authentication = false
+authorized_keys = [ "PUBKEY_SSH_FIRST_USER" ]
+
+[wlan]
+ssid = ""
+password = ""
+password_encrypted = true
+hidden = false
+country = "WPA_COUNTRY"
+
+[locale]
+keymap = "KEYBOARD_KEYMAP"
+timezone = "TIMEZONE_DEFAULT"

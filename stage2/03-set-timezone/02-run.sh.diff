@@ -1,0 +1,8 @@
+--- /home/pi/pi-gen/stage2/03-set-timezone/02-run.sh	2025-08-04 21:38:17.078488078 -0700
++++ /home/pi/pi-gen-cstm/stage2/03-set-timezone/02-run.sh	2025-08-04 22:13:18.416270223 -0700
+@@ -6,3 +6,5 @@
+ on_chroot << EOF
+ dpkg-reconfigure -f noninteractive tzdata
+ EOF
++
++sed -i "s/^#NTP=/NTP=us.pool.ntp.org/" "${ROOTFS_DIR}/etc/systemd/timesyncd.conf"

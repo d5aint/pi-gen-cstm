@@ -1,0 +1,24 @@
+Index: stage2/rootfs/etc/inputrc
+===================================================================
+--- stage2.orig/rootfs/etc/inputrc
++++ stage2/rootfs/etc/inputrc
+@@ -22,8 +22,8 @@
+ # set bell-style visible
+ 
+ # make autocompletion case insensitive and display suggestions
+-# set completion-ignore-case On
+-# set show-all-if-ambiguous On
++set completion-ignore-case On
++set show-all-if-ambiguous On
+ 
+ # some defaults / modifications for the emacs mode
+ $if mode=emacs
+@@ -69,3 +69,7 @@
+ # "\e[F": end-of-line
+ 
+ $endif
++
++# mappings for up and down arrows search history
++"\e[B": history-search-forward
++"\e[A": history-search-backward
+\ No newline at end of file
