@@ -8,13 +8,13 @@
 #dtparam=spi=on
 
 # Enable audio (loads snd_bcm2835)
-dtparam=audio=on
+dtparam=audio=off
 
 # Additional overlays and parameters are documented
 # /boot/firmware/overlays/README
 
 # Automatically load overlays for detected cameras
-camera_auto_detect=1
+camera_auto_detect=0
 
 # Automatically load overlays for detected DSI displays
 display_auto_detect=1
@@ -47,5 +47,23 @@ otg_mode=1
 
 [cm5]
 dtoverlay=dwc2,dr_mode=host
+
+[pi5]
+# To charge the battery at a set voltage
+dtparam=rtc_bbat_vchg=3000000
+
+# Active cooling fan parameters
+dtparam=fan_temp0=35000
+dtparam=fan_temp0_hyst=5000
+dtparam=fan_temp0_speed=150
+dtparam=fan_temp1=45000
+dtparam=fan_temp1_hyst=5000
+dtparam=fan_temp1_speed=185
+dtparam=fan_temp2=65000
+dtparam=fan_temp2_hyst=5000
+dtparam=fan_temp2_speed=200
+dtparam=fan_temp3=75000
+dtparam=fan_temp3_hyst=5000
+dtparam=fan_temp3_speed=250
 
 [all]

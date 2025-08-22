@@ -16,17 +16,9 @@
  
  # Automatically load overlays for detected DSI displays
  display_auto_detect=1
-@@ -39,12 +39,32 @@
- # Run as fast as firmware / board allows
- arm_boost=1
- 
-+[pi4]
-+
- [cm4]
- # Enable host mode on the 2711 built-in XHCI USB controller.
- # This line should be removed if the legacy DWC2 controller is required
- # (e.g. for USB device mode) or if USB support is not required.
- otg_mode=1
+@@ -48,4 +48,22 @@
+ [cm5]
+ dtoverlay=dwc2,dr_mode=host
  
 +[pi5]
 +# To charge the battery at a set voltage
@@ -46,6 +38,4 @@
 +dtparam=fan_temp3_hyst=5000
 +dtparam=fan_temp3_speed=250
 +
- [cm5]
- dtoverlay=dwc2,dr_mode=host
- 
+ [all]
