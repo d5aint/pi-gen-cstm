@@ -1,0 +1,8 @@
+Index: stage2/rootfs/etc/issue.d/IP.issue
+===================================================================
+--- stage2.orig/rootfs/etc/issue.d/IP.issue
++++ stage2/rootfs/etc/issue.d/IP.issue
+@@ -1,2 +1 @@
+-My IP address is \4 \6
+-
++\ec My IP address is \4 \6
