@@ -1,6 +1,9 @@
 bash-completion
 dos2unix
 flashrom
+gawk
+gdisk
+lshw
 manpages
 ncdu
 needrestart
