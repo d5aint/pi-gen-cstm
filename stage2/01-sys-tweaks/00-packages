@@ -1,4 +1,4 @@
-ssh less fbset sudo psmisc
+ssh less fbset sudo psmisc ncdu
 console-setup keyboard-configuration parted
 bash-completion
 python-is-python3

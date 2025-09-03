@@ -10,7 +10,7 @@ fi
 rm -f "${ROOTFS_DIR}/"{vmlinuz,initrd.img}*
 
 on_chroot << EOF
-apt-get -y purge apt-utils cron cron-daemon-common debconf-i18n vim-common vim-tiny
+#apt-get -y purge apt-utils cron cron-daemon-common debconf-i18n vim-common vim-tiny
 
 apt-get -y --purge autoremove
 apt-get clean

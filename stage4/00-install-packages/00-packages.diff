@@ -1,0 +1,9 @@
+--- /home/pi/pi-gen/stage4/00-install-packages/00-packages	2025-09-02 17:50:09.009568936 -0700
++++ /home/pi/pi-gen-cstm/stage4/00-install-packages/00-packages	2025-09-02 18:23:14.469907901 -0700
+@@ -1,6 +0,0 @@
+-rpd-applications
+-rpd-developer
+-rpd-graphics
+-rpd-utilities
+-rpd-wayland-extras
+-rpd-x-extras

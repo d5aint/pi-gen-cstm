@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage2/03-set-timezone/02-run.sh	2025-08-19 20:21:20.708048758 -0700
-+++ /home/pi/pi-gen-cstm/stage2/03-set-timezone/02-run.sh	2025-08-19 20:49:20.116453585 -0700
+--- /home/pi/pi-gen/stage2/03-set-timezone/02-run.sh
++++ /home/pi/pi-gen-cstm/stage2/03-set-timezone/02-run.sh
 @@ -3,6 +3,8 @@
  echo "${TIMEZONE_DEFAULT}" > "${ROOTFS_DIR}/etc/timezone"
  rm "${ROOTFS_DIR}/etc/localtime"

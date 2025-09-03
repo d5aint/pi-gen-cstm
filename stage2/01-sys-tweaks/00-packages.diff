@@ -1,10 +1,10 @@
---- /home/pi/pi-gen/stage2/01-sys-tweaks/00-packages
-+++ /home/pi/pi-gen-cstm/stage2/01-sys-tweaks/00-packages
+--- /home/pi/pi-gen/stage2/01-sys-tweaks/00-packages	2025-09-02 17:50:09.009568936 -0700
++++ /home/pi/pi-gen-cstm/stage2/01-sys-tweaks/00-packages	2025-09-02 17:51:54.145660301 -0700
 @@ -1,14 +1,8 @@
 -ssh less fbset sudo psmisc strace ed ncdu
 -console-setup keyboard-configuration debconf-utils parted
 -build-essential manpages-dev bash-completion gdb pkg-config
-+ssh less fbset sudo psmisc
++ssh less fbset sudo psmisc ncdu
 +console-setup keyboard-configuration parted
 +bash-completion
  python-is-python3

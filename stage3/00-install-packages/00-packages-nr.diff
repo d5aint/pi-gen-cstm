@@ -1,0 +1,7 @@
+--- /home/pi/pi-gen/stage3/00-install-packages/00-packages-nr	2025-09-02 17:50:09.009568936 -0700
++++ /home/pi/pi-gen-cstm/stage3/00-install-packages/00-packages-nr	2025-09-02 18:02:01.474173265 -0700
+@@ -1,2 +1,2 @@
+-rpd-wayland-core
+-rpd-x-core
++#rpd-wayland-core
++#rpd-x-core
