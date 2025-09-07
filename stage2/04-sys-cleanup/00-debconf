@@ -1,0 +1,4 @@
+# sudo debconf-show packagename
+# sudo debconf-show --listowners | grep packagename | sudo xargs debconf-show
+iperf3 iperf3/start_daemon boolean false
+wireshark-common wireshark-common/install-setuid boolean false

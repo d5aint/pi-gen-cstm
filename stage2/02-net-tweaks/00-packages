@@ -2,3 +2,7 @@ wpasupplicant wireless-tools firmware-brcm80211 firmware-realtek
 raspberrypi-net-mods
 network-manager
 net-tools
+
+dnsmasq
+dns-root-data
+wireless-regdb

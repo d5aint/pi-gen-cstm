@@ -2,7 +2,7 @@ ssh less fbset sudo psmisc ncdu
 console-setup keyboard-configuration parted
 bash-completion
 python-is-python3
-avahi-daemon avahi-autoipd
+avahi-daemon avahi-autoipd libnss-mdns
 lua5.1
 luajit
 ca-certificates curl
@@ -25,3 +25,11 @@ unzip zip
 file
 kms++-utils
 python3-venv
+
+publicsuffix
+libpam-systemd
+ncurses-term
+rfkill
+userconf-pi
+polkitd
+exfatprogs
