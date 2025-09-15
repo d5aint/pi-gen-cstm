@@ -25,6 +25,7 @@ unzip zip
 file
 kms++-utils
 python3-venv
+bluez bluez-firmware
 
 publicsuffix
 libpam-systemd

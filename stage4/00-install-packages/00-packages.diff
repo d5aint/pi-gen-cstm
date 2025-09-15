@@ -1,9 +1,34 @@
---- /home/pi/pi-gen/stage4/00-install-packages/00-packages	2025-09-02 17:50:09.009568936 -0700
-+++ /home/pi/pi-gen-cstm/stage4/00-install-packages/00-packages	2025-09-02 18:23:14.469907901 -0700
-@@ -1,6 +0,0 @@
+--- /home/pi/pi-gen/stage4/00-install-packages/00-packages	2025-09-14 13:15:58.118236805 -0700
++++ /home/pi/pi-gen-cstm/stage4/00-install-packages/00-packages	2025-09-14 15:05:44.377364767 -0700
+@@ -1,6 +1,25 @@
 -rpd-applications
 -rpd-developer
 -rpd-graphics
 -rpd-utilities
 -rpd-wayland-extras
 -rpd-x-extras
++#rpd-applications
++thonny
++
++#rpd-developer
++python3-pyqt5
++python3-opengl
++python3-tk
++python3-pip
++python3-numpy
++git
++
++#rpd-graphics
++vulkan-tools
++mesa-vulkan-drivers
++libgles1
++libgles2
++
++#rpd-utilities
++agnostics
++rpi-connect
++piwiz
++
++#rpd-wayland-extras
++
++#rpd-x-extras

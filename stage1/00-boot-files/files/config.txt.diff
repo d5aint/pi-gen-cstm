@@ -1,21 +1,5 @@
---- /home/pi/pi-gen/stage1/00-boot-files/files/config.txt
-+++ /home/pi/pi-gen-cstm/stage1/00-boot-files/files/config.txt
-@@ -8,13 +8,13 @@
- #dtparam=spi=on
- 
- # Enable audio (loads snd_bcm2835)
--dtparam=audio=on
-+dtparam=audio=off
- 
- # Additional overlays and parameters are documented
- # /boot/firmware/overlays/README
- 
- # Automatically load overlays for detected cameras
--camera_auto_detect=1
-+camera_auto_detect=0
- 
- # Automatically load overlays for detected DSI displays
- display_auto_detect=1
+--- /home/pi/pi-gen/stage1/00-boot-files/files/config.txt	2025-09-14 13:15:58.114236834 -0700
++++ /home/pi/pi-gen-cstm/stage1/00-boot-files/files/config.txt	2025-09-14 13:44:25.912769269 -0700
 @@ -48,4 +48,22 @@
  [cm5]
  dtoverlay=dwc2,dr_mode=host

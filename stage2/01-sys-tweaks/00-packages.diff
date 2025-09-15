@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage2/01-sys-tweaks/00-packages	2025-09-06 21:53:04.887546887 -0700
-+++ /home/pi/pi-gen-cstm/stage2/01-sys-tweaks/00-packages	2025-09-06 22:14:31.735603584 -0700
+--- /home/pi/pi-gen/stage2/01-sys-tweaks/00-packages	2025-09-14 13:15:58.114236834 -0700
++++ /home/pi/pi-gen-cstm/stage2/01-sys-tweaks/00-packages	2025-09-14 13:47:27.369749546 -0700
 @@ -1,14 +1,8 @@
 -ssh less fbset sudo psmisc strace ed ncdu
 -console-setup keyboard-configuration debconf-utils parted
@@ -19,7 +19,7 @@
  lua5.1
  luajit
  ca-certificates curl
-@@ -16,23 +10,26 @@
+@@ -16,23 +10,27 @@
  dosfstools
  rpi-swap rpi-loop-utils
  raspberrypi-sys-mods
@@ -43,7 +43,7 @@
  file
  kms++-utils
  python3-venv
--bluez bluez-firmware
+ bluez bluez-firmware
 +
 +publicsuffix
 +libpam-systemd
