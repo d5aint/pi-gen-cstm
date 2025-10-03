@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage1/01-sys-tweaks/00-packages	2025-09-06 21:53:04.887546887 -0700
-+++ /home/pi/pi-gen-cstm/stage1/01-sys-tweaks/00-packages	2025-09-06 22:40:28.163590246 -0700
+--- /home/pi/pi-gen/stage1/01-sys-tweaks/00-packages
++++ /home/pi/pi-gen-cstm/stage1/01-sys-tweaks/00-packages
 @@ -1 +1,4 @@
  raspi-config
 +shared-mime-info
