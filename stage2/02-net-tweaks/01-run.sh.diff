@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage2/02-net-tweaks/01-run.sh	2025-09-02 17:50:09.009568936 -0700
-+++ /home/pi/pi-gen-cstm/stage2/02-net-tweaks/01-run.sh	2025-09-02 17:56:25.089890160 -0700
+--- /home/pi/pi-gen/stage2/02-net-tweaks/01-run.sh
++++ /home/pi/pi-gen-cstm/stage2/02-net-tweaks/01-run.sh
 @@ -22,3 +22,39 @@
  		WirelessEnabled=false
  	EOF

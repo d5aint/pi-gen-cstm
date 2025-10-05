@@ -1,0 +1,13 @@
+--- /home/pi/pi-gen/stage0/02-firmware/02-run.sh
++++ /home/pi/pi-gen-cstm/stage0/02-firmware/02-run.sh
+@@ -8,3 +8,10 @@
+ 	echo "do_symlinks=0" > "${ROOTFS_DIR}/etc/kernel-img.conf"
+ fi
+ rm -f "${ROOTFS_DIR}/"{vmlinuz,initrd.img}*
++
++on_chroot << EOF
++apt-get -y purge vim-common vim-tiny
++
++apt-get -y --purge autoremove
++apt-get clean
++EOF
