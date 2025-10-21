@@ -1,6 +1,0 @@
---- /home/pi/pi-gen/stage3/00-install-packages/00-packages-nr
-+++ /home/pi/pi-gen-cstm/stage3/00-install-packages/00-packages-nr
-@@ -1,2 +1,2 @@
- rpd-wayland-core
--rpd-x-core
-+#rpd-x-core

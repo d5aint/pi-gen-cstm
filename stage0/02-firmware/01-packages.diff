@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage0/02-firmware/01-packages
-+++ /home/pi/pi-gen-cstm/stage0/02-firmware/01-packages
+--- /home/pi/pi-gen/stage0/02-firmware/01-packages	2025-10-19 18:56:08.498847151 -0700
++++ /home/pi/pi-gen-cstm/stage0/02-firmware/01-packages	2025-10-19 18:14:44.259623046 -0700
 @@ -1,6 +1,7 @@
  initramfs-tools
  raspi-firmware

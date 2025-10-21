@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage0/02-firmware/02-run.sh
-+++ /home/pi/pi-gen-cstm/stage0/02-firmware/02-run.sh
+--- /home/pi/pi-gen/stage0/02-firmware/02-run.sh	2025-10-19 18:56:08.498847151 -0700
++++ /home/pi/pi-gen-cstm/stage0/02-firmware/02-run.sh	2025-10-19 18:14:44.259623046 -0700
 @@ -8,3 +8,10 @@
  	echo "do_symlinks=0" > "${ROOTFS_DIR}/etc/kernel-img.conf"
  fi
