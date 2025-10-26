@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage2/02-net-tweaks/00-packages	2025-10-19 18:56:08.502847150 -0700
-+++ /home/pi/pi-gen-cstm/stage2/02-net-tweaks/00-packages	2025-10-19 18:20:41.731463947 -0700
+--- /home/pi/pi-gen/stage2/02-net-tweaks/00-packages
++++ /home/pi/pi-gen-cstm/stage2/02-net-tweaks/00-packages
 @@ -1,4 +1,8 @@
 -wpasupplicant wireless-tools firmware-atheros firmware-brcm80211 firmware-libertas firmware-realtek firmware-mediatek firmware-marvell-prestera-
 +wpasupplicant wireless-tools firmware-brcm80211 firmware-realtek

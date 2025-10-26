@@ -2,12 +2,17 @@
 
 ##rpd-x-core
 i3
+i3lock
+i3status
 dunst
 fonts-urw-base35
 libflac14
 libogg0
 libvorbis0a
+lxappearance
 lxterminal
+network-manager-gnome
+picom
 poppler-data
 rofi
 x11-common
@@ -27,3 +32,4 @@ xserver-xorg-input-libinput
 xserver-xorg-video-fbdev
 #xserver-xorg-video-nouveau
 #xserver-xorg-video-radeon
+xss-lock

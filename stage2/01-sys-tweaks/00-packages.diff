@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage2/01-sys-tweaks/00-packages	2025-10-19 18:56:08.498847151 -0700
-+++ /home/pi/pi-gen-cstm/stage2/01-sys-tweaks/00-packages	2025-10-19 18:14:44.259623046 -0700
+--- /home/pi/pi-gen/stage2/01-sys-tweaks/00-packages
++++ /home/pi/pi-gen-cstm/stage2/01-sys-tweaks/00-packages
 @@ -1,14 +1,8 @@
 -ssh less fbset sudo psmisc strace ed ncdu
 -console-setup keyboard-configuration debconf-utils parted

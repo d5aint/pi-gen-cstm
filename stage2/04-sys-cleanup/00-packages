@@ -16,6 +16,7 @@ manpages
 minicom
 ncdu
 needrestart
+network-manager
 nmap
 ncat ndiff
 patch
@@ -30,7 +31,7 @@ whois
 
 #python3-pip
 #python3-pyinotify
-#python3-tk python3-xdg
+python3-tk python3-xdg
 #python3-psutil python3-netifaces
 #python3-venv python3-wheel python3-setuptools
 #fontconfig-config

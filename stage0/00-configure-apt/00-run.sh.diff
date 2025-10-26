@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage0/00-configure-apt/00-run.sh	2025-10-19 18:56:08.498847151 -0700
-+++ /home/pi/pi-gen-cstm/stage0/00-configure-apt/00-run.sh	2025-10-19 18:14:44.259623046 -0700
+--- /home/pi/pi-gen/stage0/00-configure-apt/00-run.sh
++++ /home/pi/pi-gen-cstm/stage0/00-configure-apt/00-run.sh
 @@ -1,6 +1,7 @@
  #!/bin/bash -e
  

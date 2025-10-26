@@ -1,5 +1,5 @@
---- /home/pi/pi-gen/stage3/00-install-packages/00-packages	2025-10-22 19:13:16.760120709 -0700
-+++ /home/pi/pi-gen-cstm/stage3/00-install-packages/00-packages	2025-10-20 20:14:21.899017538 -0700
+--- /home/pi/pi-gen/stage3/00-install-packages/00-packages
++++ /home/pi/pi-gen-cstm/stage3/00-install-packages/00-packages
 @@ -1,2 +1,21 @@
 -rpd-preferences
 -rpd-theme
@@ -24,4 +24,3 @@
 +rpd-wallpaper-trixie
 +
 +xdg-user-dirs
-\ No newline at end of file
