@@ -48,13 +48,13 @@ fi
 #EOF
 
 
-install -v -m 644 files/custom.toml "${ROOTFS_DIR}/boot/firmware/"
-FIRSTUSERPASS=`echo "$FIRST_USER_PASS" | openssl passwd -5 -stdin`
+#install -v -m 644 files/custom.toml "${ROOTFS_DIR}/boot/firmware/"
+#FIRSTUSERPASS=`echo "$FIRST_USER_PASS" | openssl passwd -5 -stdin`
 
-sed -i -e "s|TARGET_HOSTNAME|${TARGET_HOSTNAME}|g" \
-  -e "s|FIRST_USER_NAME|${FIRST_USER_NAME}|" \
-  -e "s|FIRST_USER_PASS|${FIRSTUSERPASS}|" \
-  -e "s|PUBKEY_SSH_FIRST_USER|${PUBKEY_SSH_FIRST_USER}|" \
-  -e "s|WPA_COUNTRY|${WPA_COUNTRY}|" \
-  -e "s|KEYBOARD_KEYMAP|${KEYBOARD_KEYMAP}|" \
-  -e "s|TIMEZONE_DEFAULT|${TIMEZONE_DEFAULT}|" "${ROOTFS_DIR}/boot/firmware/custom.toml"
+#sed -i -e "s|TARGET_HOSTNAME|${TARGET_HOSTNAME}|g" \
+#  -e "s|FIRST_USER_NAME|${FIRST_USER_NAME}|" \
+#  -e "s|FIRST_USER_PASS|${FIRSTUSERPASS}|" \
+#  -e "s|PUBKEY_SSH_FIRST_USER|${PUBKEY_SSH_FIRST_USER}|" \
+#  -e "s|WPA_COUNTRY|${WPA_COUNTRY}|" \
+#  -e "s|KEYBOARD_KEYMAP|${KEYBOARD_KEYMAP}|" \
+#  -e "s|TIMEZONE_DEFAULT|${TIMEZONE_DEFAULT}|" "${ROOTFS_DIR}/boot/firmware/custom.toml"

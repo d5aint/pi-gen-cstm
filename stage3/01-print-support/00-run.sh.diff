@@ -1,9 +1,0 @@
---- /home/pi/pi-gen/stage3/01-print-support/00-run.sh
-+++ /home/pi/pi-gen-cstm/stage3/01-print-support/00-run.sh
-@@ -1,5 +1,5 @@
- #!/bin/bash -e
- 
- on_chroot <<EOF
--adduser "$FIRST_USER_NAME" lpadmin
-+#adduser "$FIRST_USER_NAME" lpadmin
- EOF

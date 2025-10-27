@@ -1,9 +1,9 @@
 ##rpd-preferences
-rpcc
-pipanel
-rc-gui
+#rpcc
+#pipanel
+#rc-gui
 #raindrop
-rasputin
+#rasputin
 #rpinters
 #rp-prefapps
 #cups
@@ -15,7 +15,5 @@ rasputin
 #pixtrix-icons
 #fonts-nunito-sans
 #fonts-liberation2
-rpd-wallpaper
-rpd-wallpaper-trixie
-
-xdg-user-dirs
+#rpd-wallpaper
+#rpd-wallpaper-trixie

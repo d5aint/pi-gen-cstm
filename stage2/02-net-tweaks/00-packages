@@ -1,8 +1,4 @@
-wpasupplicant wireless-tools firmware-brcm80211 firmware-realtek
+wpasupplicant wireless-tools firmware-brcm80211 firmware-realtek #firmware-atheros firmware-libertas firmware-mediatek firmware-marvell-prestera-
 raspberrypi-net-mods
 network-manager
 net-tools
-
-dnsmasq
-dns-root-data
-wireless-regdb

@@ -1,7 +1,0 @@
---- /home/pi/pi-gen/stage1/01-sys-tweaks/00-packages
-+++ /home/pi/pi-gen-cstm/stage1/01-sys-tweaks/00-packages
-@@ -1 +1,4 @@
- raspi-config
-+shared-mime-info
-+iw
-+flashrom
