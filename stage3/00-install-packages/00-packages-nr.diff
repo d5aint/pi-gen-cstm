@@ -1,0 +1,40 @@
+--- /home/pi/pi-gen/stage3/00-install-packages/00-packages-nr
++++ /home/pi/pi-gen-cstm/stage3/00-install-packages/00-packages-nr
+@@ -1,2 +1,35 @@
+-rpd-wayland-core
+-rpd-x-core
++##rpd-wayland-core
++
++##rpd-x-core
++#i3
++#i3lock
++#i3status
++#dunst
++#fonts-urw-base35
++#libflac14
++#libogg0
++#libvorbis0a
++#lxappearance
++#lxterminal
++#network-manager-gnome
++#picom
++#poppler-data
++#rofi
++#x11-common
++#x11-xkb-utils
++#xdg-utils
++#xfonts-encodings
++#xfonts-utils
++#xinit
++#xserver-common
++#xserver-xorg
++#xserver-xorg-core
++#xserver-xorg-input-all
++#xserver-xorg-input-libinput
++#xserver-xorg-video-all
++#xserver-xorg-video-amdgpu
++#xserver-xorg-video-ati
++#xserver-xorg-video-fbdev
++#xserver-xorg-video-nouveau
++#xserver-xorg-video-radeon
++#xss-lock

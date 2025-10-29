@@ -1,0 +1,8 @@
+--- /home/pi/pi-gen/stage2/02-net-tweaks/00-packages
++++ /home/pi/pi-gen-cstm/stage2/02-net-tweaks/00-packages
+@@ -1,4 +1,4 @@
+-wpasupplicant wireless-tools firmware-atheros firmware-brcm80211 firmware-libertas firmware-realtek firmware-mediatek firmware-marvell-prestera-
++wpasupplicant wireless-tools firmware-brcm80211 firmware-realtek #firmware-atheros firmware-libertas firmware-mediatek firmware-marvell-prestera-
+ raspberrypi-net-mods
+ network-manager
+ net-tools

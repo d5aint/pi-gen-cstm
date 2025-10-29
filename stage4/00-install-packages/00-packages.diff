@@ -1,0 +1,15 @@
+--- /home/pi/pi-gen/stage4/00-install-packages/00-packages
++++ /home/pi/pi-gen-cstm/stage4/00-install-packages/00-packages
+@@ -1,6 +1,6 @@
+-rpd-applications
+-rpd-developer
+-rpd-graphics
+-rpd-utilities
+-rpd-wayland-extras
+-rpd-x-extras
++##rpd-applications
++##rpd-developer
++##rpd-graphics
++##rpd-utilities
++##rpd-wayland-extras
++##rpd-x-extras
