@@ -1,0 +1,40 @@
+/*
+ * Allow users in the 'sudo' group to manage power
+ * (shutdown, reboot, suspend) without a password.
+ */
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.login1.reboot" ||
+         action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+         action.id == "org.freedesktop.login1.power-off" ||
+         action.id == "org.freedesktop.login1.power-off-multiple-sessions" ||
+         action.id == "org.freedesktop.login1.suspend" ||
+         action.id == "org.freedesktop.login1.suspend-multiple-sessions") &&
+        subject.isInGroup("sudo")) {
+        
+        return polkit.Result.YES;
+    }
+});
+
+/*
+ * Allow users in the 'sudo' group to control NetworkManager
+ * (manage Wi-Fi, enable/disable networking, scan).
+ */
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.NetworkManager.enable-disable-wifi" ||
+         action.id == "org.freedesktop.NetworkManager.wifi.scan" ||
+         action.id == "org.freedesktop.NetworkManager.network-control") &&
+        subject.isInGroup("sudo")) {
+        
+        return polkit.Result.YES;
+    }
+});
+
+/*
+ * Allow users in the 'sudo' group to mount, unmount, and eject
+ * all storage devices without a password.
+ */
+polkit.addRule(function(action, subject) {
+    if (action.id.indexOf("org.freedesktop.udisks2.") == 0 && subject.isInGroup("sudo")) {
+        return polkit.Result.YES;
+    }
+});
