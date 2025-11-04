@@ -1,6 +1,6 @@
 --- /home/pi/pi-gen/stage3/00-install-packages/00-packages-nr
 +++ /home/pi/pi-gen-cstm/stage3/00-install-packages/00-packages-nr
-@@ -1,2 +1,26 @@
+@@ -1,2 +1,27 @@
 -rpd-wayland-core
 -rpd-x-core
 +##rpd-wayland-core
@@ -11,6 +11,7 @@
 +feh
 +lxappearance
 +lxterminal
++mesa-utils
 +#mesa-vulkan-drivers
 +network-manager-gnome
 +picom
@@ -20,8 +21,8 @@
 +x11-common
 +x11-utils
 +xdg-utils
-+#xfonts-encodings
-+#xfonts-utils
++xfonts-encodings
++xfonts-utils
 +xinit
 +xserver-common
 +xserver-xorg

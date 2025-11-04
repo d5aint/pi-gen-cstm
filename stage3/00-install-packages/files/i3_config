@@ -20,8 +20,8 @@ set $mod Mod4
 
 # Set your preferred terminal and launcher
 set $term i3-sensible-terminal
-set $launcher "rofi -show drun"
-#set $launcher "rofi -modi drun,run -show drun"
+#set $launcher "rofi -show drun"
+set $launcher "rofi -modi drun,run -show drun"
 
 # Color scheme (Catppuccin Macchiato)
 set $bg-color          #24273a
@@ -35,8 +35,8 @@ set $urgent-color      #f38ba8
 # -----------------------------------------------------------------------------
 # Use a Nerd Font for icon support in the bar
 # Note: You must install a Nerd Font.
-#font pango:FiraCode Nerd Font 10
-font pango:DejaVu Sans Mono 8
+font pango:FiraCode Nerd Font 10
+#font pango:DejaVu Sans Mono 8
 
 # Add gaps for a modern look
 gaps inner 10
@@ -63,7 +63,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager tray icon
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Set a wallpaper using feh
 # Note: You must create this folder and add a wallpaper file.
@@ -219,7 +219,8 @@ tiling_drag modifier titlebar
 
 # Make the specific network info GUI fullscreen on launch
 # This rule is more targeted and won't affect other Tk apps.
-for_window [class="^Tk$" instance="cdpigui.py"] fullscreen enable
+for_window [class="^Tk$" title="Network Information"] fullscreen
+#for_window [class="^Tk$"] fullscreen
 
 # Resize mode
 mode "resize" {
@@ -244,7 +245,7 @@ bindsym $mod+r mode "resize"
 # === i3bar Configuration
 # =============================================================================
 bar {
-    status_command i3status
+    status_command i3status -c ~/.config/i3status/config
     tray_output primary
     font pango:FiraCode Nerd Font 10
 

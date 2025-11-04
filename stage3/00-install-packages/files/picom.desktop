@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+Type=Application
+Name=picom
+Comment=X11 compositor for shadows, fading, and VSync
+#Exec=picom -b
+Exec=env MESA_GL_VERSION_OVERRIDE=4.5 picom -b

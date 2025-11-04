@@ -6,6 +6,7 @@ dunst
 feh
 lxappearance
 lxterminal
+mesa-utils
 #mesa-vulkan-drivers
 network-manager-gnome
 picom
@@ -15,8 +16,8 @@ rofi
 x11-common
 x11-utils
 xdg-utils
-#xfonts-encodings
-#xfonts-utils
+xfonts-encodings
+xfonts-utils
 xinit
 xserver-common
 xserver-xorg

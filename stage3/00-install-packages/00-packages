@@ -11,8 +11,11 @@
 #pi-printer-support
 
 ##rpd-theme
+adwaita-icon-theme-legacy
 #pixtrix-theme
 #pixtrix-icons
+fonts-dejavu-extra
+fonts-freefont-ttf
 #fonts-nunito-sans
 #fonts-liberation2
 #rpd-wallpaper

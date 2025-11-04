@@ -1,0 +1,89 @@
+# i3status.conf for Raspberry Pi 5 (800x480 screen)
+#
+# This config is optimized for extreme brevity to fit the
+# low-resolution display.
+#
+# https://i3wm.org/i3status/manpage.html
+#
+
+general {
+    output_format = "i3bar"
+    interval = 3
+    separator = "|"
+
+    colors = true
+    color_good = "#859900"
+    color_degraded = "#cb4b16"
+    color_bad = "#dc322f"
+}
+
+# Order: CPU, Temp, RAM, Disk, Network, Volume, Time
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "memory"
+order += "disk /"
+order += "wireless _first_"
+order += "ethernet _first_"
+#order += "volume master"
+order += "tztime local"
+
+cpu_usage {
+    format = "C: %usage"
+    max_threshold = 75
+    degraded_threshold = 50
+}
+
+cpu_temperature 0 {
+    path = "/sys/class/thermal/thermal_zone0/temp"
+    format = "T: %degrees°C" # "T: 45°C"
+    max_threshold = 80 # RPi 5 throttles around 80-85°C
+    format_above_threshold = "HOT: %degrees°C"
+}
+
+memory {
+    format = "R: %used MiB"
+    threshold_degraded = 10%
+    threshold_critical = 5%
+    format_degraded = "R: %available MiB"
+}
+
+disk "/" {
+    format = "D: %used"
+    prefix_type = "binary"
+}
+
+wireless _first_ {
+    format_up = "W: %ip (%essid)"
+    format_down = "W: down"
+}
+
+ethernet _first_ {
+    format_up = "E: %ip"
+    format_down = "E: down"
+}
+
+/*
+# Volume for ALSA (common on 'Lite' OS)
+# If you have PulseAudio/PipeWire, comment this out
+# and enable the 'volume pulse' block below.
+volume master {
+    format = "V: %volume%%"
+    format_muted = "V: muted"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+*/
+
+/*
+# Volume for PulseAudio (if 'volume master' doesn't work) 
+volume pulse {
+    format = "V: %volume%%" [cite: 4]
+    format_muted = "V: muted" [cite: 4]
+    device = "default"
+}
+*/
+
+tztime local {
+    format = "%H:%M %d/%m"
+}
