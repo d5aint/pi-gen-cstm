@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -euo pipefail
 
 on_chroot << EOF
 apt-mark manual lsb-release

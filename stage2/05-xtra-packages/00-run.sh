@@ -1,8 +1,15 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -euo pipefail
 
 install -m 644 files/40-local-basic-rules.rules "${ROOTFS_DIR}/etc/polkit-1/rules.d/"
 
-#if [ -f "${ROOTFS_DIR}/etc/update-motd.d/10-uname" ]; then
+# WHY: Drop-in file rather than editing journald.conf directly — survives
+# package upgrades that may overwrite the base config.
+install -d "${ROOTFS_DIR}/etc/systemd/journald.conf.d"
+install -m 644 files/journald-custom.conf "${ROOTFS_DIR}/etc/systemd/journald.conf.d/"
+
+#if [[ -f "${ROOTFS_DIR}/etc/update-motd.d/10-uname" ]]; then
 #    rm "${ROOTFS_DIR}/etc/update-motd.d/10-uname"
 #    mkdir "${ROOTFS_DIR}/etc/update-motd-static.d"
 #fi
@@ -26,8 +33,8 @@ install -m 644 files/40-local-basic-rules.rules "${ROOTFS_DIR}/etc/polkit-1/rule
 #EOF
 
 on_chroot << EOF
-#apt-mark manual 
-#apt-get -y purge 
+#apt-mark manual
+#apt-get -y purge
 apt-get -y --purge autoremove
 apt-get clean
 EOF

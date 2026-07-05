@@ -1,15 +1,21 @@
 #!/bin/bash
 
+set -euo pipefail
+
 function color (){
   echo "\e[$1m$2\e[0m"
 }
 
 function findDeviceModel (){
   deviceName=""
-  local deviceModel=$(tr -d '\0' < /sys/firmware/devicetree/base/model)
-  local hostName=$(hostname)
+  # WHY: 2>/dev/null suppresses error when run on non-Pi hardware or in
+  # environments where the devicetree node is absent.
+  local deviceModel
+  deviceModel=$(tr -d '\0' < /sys/firmware/devicetree/base/model 2>/dev/null || echo "Unknown")
+  local hostName
+  hostName=$(hostname)
 
-  if [ $hostName ]; then
+  if [[ -n "$hostName" ]]; then
     deviceName="$deviceModel - $hostName"
   else
     deviceName="$deviceModel"
@@ -20,20 +26,22 @@ deviceColor="38;5;16;48;5;249"
 greetingsColor="38;5;103"
 userColor="38;5;16;48;5;67"
 codenameColor="38;5;108"
-me=$(logname)
+# WHY: logname is unreliable in SSH/PAM/systemd contexts; it reads utmp which
+# may not reflect the actual logged-in user. SUDO_USER or USER is correct.
+me="${SUDO_USER:-${USER:-unknown}}"
 findDeviceModel
 
 # Device Info
-deviceLabel=" $(color $deviceColor " $deviceName ")"
+deviceLabel=" $(color "$deviceColor" " $deviceName ")"
 
 # Greetings
-me="$(color $userColor " $me ")"
+me="$(color "$userColor" " $me ")"
 codename="$(grep 'VERSION_CODENAME' /etc/os-release | cut -d '=' -f 2)"
-greetings="$(color $greetingsColor " * Welcome") $me $(color $greetingsColor To) $(color $codenameColor $codename)\n"
-greetings="$greetings$(color $greetingsColor " * $(date +"%a %b %d %Y, %I:%M:%S %p")")\n"
+greetings="$(color "$greetingsColor" " * Welcome") $me $(color "$greetingsColor" To) $(color "$codenameColor" "$codename")\n"
+greetings="$greetings$(color "$greetingsColor" " * $(date +"%a %b %d %Y, %I:%M:%S %p")")\n"
 
 # OS
-greetings="$greetings$(color $greetingsColor " * $(uname -srm)")"
+greetings="$greetings$(color "$greetingsColor" " * $(uname -srm)")"
 
 # Print
 echo -e "\n$deviceLabel"

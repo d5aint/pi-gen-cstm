@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 function color (){
   echo "\e[$1m$2\e[0m"
 }
@@ -8,7 +10,9 @@ function setCountColor (){
   local input=$1
   countColor="38;5;16;48;5;242"
 
-  if [ $input == 0 ]; then
+  # WHY: Use [[ with -eq for numeric comparison; bare [ with == is a string
+  # comparison that produces a syntax error when $input is empty.
+  if [[ "$input" -eq 0 ]]; then
     countColor="38;5;16;48;5;242"
   else
     countColor="38;5;16;48;5;71"
@@ -28,8 +32,14 @@ function msgFormat (){
 msgColor="38;5;103"
 
 # Count
-apt-get update --quiet=2
-pkgCount="$(apt-get -s dist-upgrade | grep -Po '^\d+(?= upgraded)')"
+# WHY: apt-get update failure (e.g., no network at login) is non-fatal here;
+# || true prevents aborting the MOTD script on transient network errors.
+apt-get update --quiet=2 || true
+# WHY: grep exits 1 when zero packages match (no upgrades pending), which
+# aborts the script under set -e and leaves pkgCount empty. || echo 0 ensures
+# pkgCount is always a valid integer, preventing the [[ -eq 0 ]] test from
+# erroring on an empty string.
+pkgCount="$(apt-get -s dist-upgrade | grep -Po '^\d+(?= upgraded)' || echo 0)"
 setCountColor "$pkgCount"
 
 # Message
@@ -40,7 +50,7 @@ msgLabel="$(color $msgColor "$(msgFormat $pkgCount) can be upgraded")"
 updateMsg=" $msgHeader $msgCount $msgLabel"
 
 # Output To Static Script
-OUT="/etc/update-motd.d/"$(basename $0)
+OUT="/etc/update-motd.d/$(basename "$0")"
 exec >${OUT}
 echo "#!/bin/bash"
 echo

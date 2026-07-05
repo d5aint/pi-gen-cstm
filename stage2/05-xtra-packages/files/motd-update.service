@@ -3,4 +3,11 @@ Description=Motd upgradable package count service
 After=network.target
 
 [Service]
-ExecStart=run-parts /etc/update-motd-static.d
+# WHY: Type=oneshot tells systemd this service runs a command and exits
+# immediately. Without it, Type=simple assumes a long-running process and
+# marks the unit failed when run-parts exits, which suppresses the
+# Persistent=true timer from firing on the next boot.
+Type=oneshot
+# WHY: Full path required; systemd services run with a minimal environment
+# and do not inherit the user's $PATH.
+ExecStart=/bin/run-parts /etc/update-motd-static.d
