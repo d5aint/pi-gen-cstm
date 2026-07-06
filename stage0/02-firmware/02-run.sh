@@ -12,7 +12,7 @@ fi
 rm -f "${ROOTFS_DIR}/"{vmlinuz,initrd.img}*
 
 on_chroot << EOF
-apt-get -y purge apparmor vim-common vim-tiny
+apt-get -y purge vim-common vim-tiny
 apt-get -y --purge autoremove
 apt-get clean
 EOF
