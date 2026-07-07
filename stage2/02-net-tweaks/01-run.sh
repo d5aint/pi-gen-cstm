@@ -13,13 +13,11 @@ for addr in 107d50c000.serial 3f215040.serial 20215040.serial fe215040.serial so
 	echo 0 > "${ROOTFS_DIR}/var/lib/systemd/rfkill/platform-${addr}:bluetooth"
 done
 
-# WHY: [[ -v ]] checks whether the variable is defined without expanding it,
-# so WPA_COUNTRY being unset does not trigger set -u.
-if [[ -v WPA_COUNTRY ]]; then
+if [ -v WPA_COUNTRY ]; then
 	on_chroot <<- EOF
 		SUDO_USER="${FIRST_USER_NAME}" raspi-config nonint do_wifi_country "${WPA_COUNTRY}"
 	EOF
-elif [[ -d "${ROOTFS_DIR}/var/lib/NetworkManager" ]]; then
+elif [ -d "${ROOTFS_DIR}/var/lib/NetworkManager" ]; then
 	# NetworkManager unblocks all WLAN devices by default. Prevent that:
 	cat > "${ROOTFS_DIR}/var/lib/NetworkManager/NetworkManager.state" <<- EOF
 		[main]

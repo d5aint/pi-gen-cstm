@@ -4,13 +4,9 @@ set -euo pipefail
 
 install -m 664 -o 1000 -g 1000 files/fonts-firacode_6.2-3_all.deb "${ROOTFS_DIR}/tmp/fonts-firacode_6.2-3_all.deb"
 on_chroot << EOF
-    # WHY: -y flag required for non-interactive build; without it apt prompts and hangs.
     apt install -y /tmp/fonts-firacode_6.2-3_all.deb
 EOF
 
-# WHY: Brace expansion requires unquoted words; use a base variable so the
-# per-directory paths are still quoted individually, preventing word-splitting
-# if ROOTFS_DIR or FIRST_USER_NAME ever contains spaces.
 base="${ROOTFS_DIR}/home/${FIRST_USER_NAME}/.config"
 mkdir -p \
   "${base}/autostart" \
@@ -41,11 +37,6 @@ on_chroot << EOF
     apt-get clean
 EOF
 
-
-# WHY: 'EOF' (single-quoted) prevents the build shell from expanding $DISPLAY
-# and $(tty) at image-build time. Without it, $DISPLAY expands to the build
-# host's display (usually empty), so the if-condition is always true and
-# startx runs unconditionally on every login — including non-tty1 logins.
 cat >> "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/.profile" <<- 'EOF'
 
 # Start i3 on login
