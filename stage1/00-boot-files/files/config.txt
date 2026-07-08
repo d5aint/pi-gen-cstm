@@ -49,6 +49,8 @@ otg_mode=1
 dtoverlay=dwc2,dr_mode=host
 
 [pi5]
+dtoverlay=nospi10
+
 # To charge the battery at a set voltage
 dtparam=rtc_bbat_vchg=3000000
 
