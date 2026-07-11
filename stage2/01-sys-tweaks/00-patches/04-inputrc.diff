@@ -13,12 +13,13 @@ Index: stage2/rootfs/etc/inputrc
  
  # some defaults / modifications for the emacs mode
  $if mode=emacs
-@@ -69,3 +69,7 @@
- # "\e[F": end-of-line
+@@ -65,7 +65,7 @@
+ # "\eOF": end-of-line
+ 
+ # for freebsd console
+-# "\e[H": beginning-of-line
+-# "\e[F": end-of-line
++"\e[H": beginning-of-line
++"\e[F": end-of-line
  
  $endif
-+
-+# mappings for up and down arrows search history
-+"\e[B": history-search-forward
-+"\e[A": history-search-backward
-\ No newline at end of file

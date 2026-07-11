@@ -1,6 +1,6 @@
 ssh less fbset sudo psmisc ncdu
-console-setup keyboard-configuration parted #debconf-utils
-bash-completion #build-essential manpages-dev gdb pkg-config
+console-setup keyboard-configuration parted
+build-essential manpages-dev bash-completion gdb pkg-config
 python-is-python3
 avahi-daemon
 lua5.1
@@ -8,7 +8,7 @@ luajit
 ca-certificates curl
 usbutils
 dosfstools
-rpi-loop-utils #rpi-swap
+rpi-loop-utils
 raspberrypi-sys-mods
 usb-modeswitch
 libpam-chksshpwd
@@ -23,7 +23,7 @@ pciutils
 rpi-eeprom
 raspi-utils
 udisks2
-unzip zip #p7zip-full
+unzip zip
 file
 kms++-utils
 python3-venv

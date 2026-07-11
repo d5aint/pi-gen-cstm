@@ -25,7 +25,3 @@ if [[ -n "${FIRST_USER_PASS:-}" ]]; then
 fi
 echo "root:root" | chpasswd
 EOF
-
-#echo "${FIRST_USER_NAME} ALL=(ALL) NOPASSWD: ALL" \
-#    > "${ROOTFS_DIR}/etc/sudoers.d/010_${FIRST_USER_NAME}-nopasswd"
-#chmod 0440 "${ROOTFS_DIR}/etc/sudoers.d/010_${FIRST_USER_NAME}-nopasswd"
