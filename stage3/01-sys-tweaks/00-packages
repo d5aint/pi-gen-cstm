@@ -1,5 +1,7 @@
+apparmor-utils
 auditd
-#avahi-autoipd 
+#avahi-autoipd
+chrony
 #fail2ban
 #flashrom
 #fontconfig-config
@@ -25,6 +27,7 @@ manpages
 #ncat
 #ndiff
 patch
+python3-apparmor
 python3-pip
 #python3-pyinotify
 #python3-tk
@@ -42,3 +45,4 @@ tcpd
 #usb.ids
 #whois
 xz-utils
+zstd

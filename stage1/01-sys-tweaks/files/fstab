@@ -1,8 +1,4 @@
-proc            /proc           proc    defaults                              0  0
-BOOTDEV         /boot/firmware  vfat    defaults                              0  2
-ROOTDEV         /               ext4    defaults,noatime                      0  1
-VARDEV          /var            ext4    defaults,noatime                      0  2
-VARLOGDEV       /var/log        ext4    defaults,noatime,nodev,nosuid         0  2
-VARTMPDEV       /var/tmp        ext4    defaults,noatime,nodev,nosuid,noexec  0  2
-HOMEDEV         /home           ext4    defaults,noatime,nodev                0  2
-tmpfs           /tmp            tmpfs   defaults,noatime,nodev,nosuid,noexec,size=1G  0  0
+proc            /proc           proc    defaults                                        0   0
+BOOTDEV         /boot/firmware  vfat    defaults                                        0   2
+ROOTDEV         /               ext4    defaults,noatime                                0   1
+tmpfs           /tmp            tmpfs   defaults,noatime,nodev,nosuid,noexec,size=1G    0   0
