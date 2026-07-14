@@ -1,0 +1,10 @@
+# CIS 5.4.4 — set default umask to 077 for all new files and directories.
+# 077 means only the owner can read/write/execute newly created files.
+umask 077
+
+# CIS 5.4.5 — auto-disconnect idle shell sessions after 600 seconds (10 min).
+# readonly prevents users from unsetting or extending the timeout within a
+# session. export makes it visible to child processes (subshells, scripts).
+TMOUT=600
+readonly TMOUT
+export TMOUT

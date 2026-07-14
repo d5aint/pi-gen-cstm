@@ -14,9 +14,12 @@ usb-modeswitch
 libpam-chksshpwd
 rpi-update
 rsync
+git
 htop
 man-db
+manpages
 nano
+patch
 ssh-import-id
 ethtool
 pciutils
@@ -24,6 +27,8 @@ rpi-eeprom
 raspi-utils
 udisks2
 unzip zip
+xz-utils
+zstd
 file
 kms++-utils
 python3-venv
